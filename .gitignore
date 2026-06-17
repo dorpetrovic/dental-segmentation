@@ -41,6 +41,8 @@ outputs/results/
 data/images/
 data/processed/
 data/annotations/akudental_instances.json
+outputs/visualizations/
+
 # Keep annotations under version control (they're JSON, small)
 # data/annotations/ → tracked
 
