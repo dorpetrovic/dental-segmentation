@@ -1,3 +1,14 @@
+---
+title: Dental Teeth Segmentation
+emoji: 🦷
+colorFrom: blue
+colorTo: gray
+sdk: gradio
+sdk_version: "3.50.2"
+app_file: app/gradio_demo.py
+pinned: true
+---
+
 # Dental Teeth Segmentation — Mask R-CNN
 
 Instance segmentation of individual teeth in dental panoramic X-ray images using a fine-tuned **Mask R-CNN** (ResNet-50+FPN, torchvision,  COCO pre-trained weights).
