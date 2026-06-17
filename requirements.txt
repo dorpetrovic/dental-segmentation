@@ -1,0 +1,39 @@
+# Torchvision Mask R-CNN — Requirements
+# Environment: torch-dental (Python 3.10)
+# Install locally: pip install -r requirements.txt
+
+
+# ── PyTorch (only installed when NOT using the Docker base image) ─────────────
+# Comment these two out if building Docker — the base image already has them.
+#torch>=2.0.1
+#torchvision>=0.15.2
+
+
+# ── NumPy — pin to 1.x for compatibility with pytorch/pytorch:2.0.1 base image
+numpy<2.0.0
+
+# ── Image processing ─────────────────────────────────────────────────────────
+opencv-python>=4.7.0
+scikit-image>=0.20.0
+Pillow>=9.4.0
+
+# ── COCO evaluation ───────────────────────────────────────────────────────────
+pycocotools>=2.0.6
+
+# ── Data & visualization ──────────────────────────────────────────────────────
+matplotlib>=3.7.0
+pandas>=1.5.0
+
+# ── API & demo ────────────────────────────────────────────────────────────────
+fastapi>=0.100.0
+uvicorn>=0.23.0
+python-multipart>=0.0.6
+gradio>=3.50.2
+
+# ── Notebook support ──────────────────────────────────────────────────────────
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+tqdm>=4.65.0
+pyyaml>=6.0

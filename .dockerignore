@@ -1,0 +1,37 @@
+# Weights — Docker downloads these fresh during build
+mask_rcnn_coco.h5
+*.h5
+*.hdf5
+
+# Training outputs — these are mounted at runtime, not baked into image
+outputs/logs/
+outputs/results/
+outputs/visualizations/
+
+# Data — mounted at runtime
+data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+venv/
+env/
