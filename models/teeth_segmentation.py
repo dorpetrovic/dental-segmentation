@@ -513,8 +513,20 @@ def predict(image_path):
 # used in Gradio, loads once at startup then reuse for every request
 def load_inference_model():
     """Load model for use in Gradio/FastAPI."""
-    num_classes  = 2 if BINARY else 36
     weights_path = RESULTS_DIR / 'best.pth'
+
+    # Downloads model weights stored on huggingface
+    if not weights_path.exists():
+        from huggingface_hub import hf_hub_download
+        print("Downloading weights from Hugging Face Hub ...")
+        hf_hub_download(
+            repo_id = "chocodo/dental-segmentation-maskrcnn-torch",
+            filename = "best.pth",
+            local_dir = str(RESULTS_DIR),
+        )
+        print("Weights downloaded.")
+
+    num_classes  = 2 if BINARY else 36
     model = build_model(num_classes)
     model.load_state_dict(torch.load(weights_path, map_location=DEVICE, weights_only=True))
     model.to(DEVICE)
