@@ -40,6 +40,7 @@ outputs/results/
 # Raw and processed images — store separately (DVC, cloud storage)
 data/images/
 data/processed/
+data/annotations/akudental_instances.json
 # Keep annotations under version control (they're JSON, small)
 # data/annotations/ → tracked
 
